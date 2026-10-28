@@ -12,6 +12,8 @@ jobs:
   quality:
     uses: Kataglyphis/ANTfrastructure/.github/workflows/lint-gates.yml@develop
     with:
+      # No hub submodule: it would close the ANTfrastructure -> DocumANTation -> smile cycle.
+      hub-checkout: true
       ratchets: true
       code-dupes: true
       code-dupes-report: false
